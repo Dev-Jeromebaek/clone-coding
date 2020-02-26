@@ -1,0 +1,194 @@
+body { min-width: 1280px; font-family: 'NotoSansKR', '맑은 고딕', 'Malgun Gothic', 돋움, Dotum, 'Apple SD Gothic Neo', sans-serif; font-size: 16px; }
+section h2 { padding: 50px 0 16px; font-size: 28px; color: #000; text-align: center; }
+/* slide */
+.slide .prev,
+.slide .next { display: block; position: absolute; top: 50%; z-index: 10; width: 25px; height: 45px; transform: translateY(-50%); background: url(../images/sp_com.png) no-repeat; color: transparent; }
+.slide .prev { left: 82px; background-position: -128px -60px; }
+.slide .next { right: 82px; background-position: -158px -60px; }
+.slide .control { position: absolute; left: 0; bottom: 55px; width: 100%; text-align: center; }
+.slide .control > div { display: inline-block; position: relative; padding: 0 45px 0 0; }
+.slide .control > div > div { position: absolute; right: 0; }
+.slide .control > div > div a { overflow: hidden; display: inline-block; margin: 0 0 0 6px; width: 8px; height: 9px; background: url(../images/sp_com.png) no-repeat; opacity: 0.5; }
+.slide .control > div > div a.active { opacity: 1; }
+.slide .control > div > div a.play { background-position: -108px -72px; }
+.slide .control > div > div a.pause { background-position: -108px -60px; }
+.slide .control ul { display: inline-block; position: relative; top: -6px; font-size: 0; }
+.slide .control li { display: inline-block; padding: 0 3px; }
+.slide .control li.active a { background: #fff; }
+.slide .control li a { display: block; width: 50px; height: 3px; background: rgba(255, 255, 255, 0.5); }
+.slide .control a { color: transparent; /* border: 1px solid red; */ }
+
+/* select box */
+.selectbox { position: relative; height: 45px; margin-top: 10px; display: block; border: 0 none; z-index: 1; background-color: #f2f0ed; }
+.selectbox label { position: absolute; padding: 0 35px 0 15px; height: 45px; line-height: 45px; z-index: -1; color: #000; /* IE8에서 label이 위치한 곳이 클릭되지 않는 것 해결 */}
+.selectbox select { width: 100%; padding: 0 35px 0 15px; font-family: inherit; border: 0; opacity: 0; }
+.selectbox:before { content: ""; position: absolute; top: 50%; right: 15px; width: 0; height: 0; margin-top: -2px; border-left: 3px solid transparent; border-right: 3px solid transparent; border-top: 5px solid #000; }
+
+/* header */
+header { position: relative; height: 80px; text-align: center; }
+header h1 { position: absolute; left: 50px; top: 0; margin: 0; padding: 14px 0 0; }
+header h1 a { display: block; width: 110px; height: 48px; color: transparent; background: url(../images/sp_com.png) no-repeat -300px 0px; }
+header h1 a:hover { color: transparent; }
+header .lnb li { display: inline-block; }
+header .lnb li a { display: block; height: 80px; padding: 0 35px; font-size: 17px; color: #333; line-height: 80px; }
+header .lnb li a:hover { color: #2d5b79; font-weight: bold; }
+header .lnb li a span { position: relative; }
+header .lnb li a:hover span:after { content: ""; position: absolute; left: 0; bottom: -9px; display: block; width: 100%; height: 1px; background: #2d5b79; }
+header .spot { position: absolute; right: 50px; top: 0; }
+header .spot li { position: relative; float: left; }
+header .spot li:after { content: ""; position: absolute; left: 0; top: 50%; width: 1px; height: 7px; background: #ccc; transform: translateY(-50%); }
+header .spot li:first-child:after { display: none; }
+header .spot li a { display: block; height: 80px; padding: 0 10px; font-size: 14px; line-height: 80px; }
+header .spot li a:hover { text-decoration: underline; }
+header .spot li:last-child a { padding-right: 0; }
+
+/* visual */
+.visual { position: relative; padding: 0 50px; }
+.visual .con {}
+.visual .con > div { height: 640px; }
+.visual .con .slide { color: #fff; font-size: 26px;}
+.visual .con .slide.slide1 { background: url(../images/bg_main02.jpg) no-repeat center; }
+.visual .con .slide.slide2 { background: url(../images/bg_main03.jpg) no-repeat center; }
+.visual .con .slide.slide3 { background: url(../images/bg_main04.jpg) no-repeat center; }
+.visual .con .slide.slide4 { background: url(../images/bg_main05.jpg) no-repeat center; }
+.visual .con .slide a { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: #fff; }
+.visual .con .slide span { display: inline-block; width: 124px; height: 110px; background: url(../images/sp_com.png) no-repeat; }
+.visual .con .slide span.icon1 { background-position: 0 -252px; }
+.visual .con .slide span.icon2 { background-position: -126px -252px; }
+.visual .con .slide span.icon3 { background-position: -252px -252px; }
+.visual .con .slide span.icon4 { background-position: -378px -252px; }
+.visual .con .slide p { padding: 10px 0; }
+.visual .con .slide b { font-weight: 500; font-size: 30px; }
+
+/* product */
+.product { width: 1180px; margin: 0 auto; }
+.product a { display: block; color: #000; font-size: 16px; }
+/* .product a span { display: block; margin-bottom: 14px; width: 70px; height: 64px; background: url(../images//sp_com.png) no-repeat; }
+.product a span.prd01 { background-position: 0 -112px; }
+.product a span.prd02 { background-position: -72px -112px; }
+.product a span.prd03 { background-position: -144px -112px; }
+.product a span.prd04 { background-position: -216px -112px; }
+.product a span.prd05 { background-position: -288px -112px; }
+.product a span.prd06 { background-position: -360px -112px; }
+.product a:hover span.prd01 { background-position: 0 -178px; }
+.product a:hover span.prd02 { background-position: -72px -178px; }
+.product a:hover span.prd03 { background-position: -144px -178px; }
+.product a:hover span.prd04 { background-position: -216px -178px; }
+.product a:hover span.prd05 { background-position: -288px -178px; }
+.product a:hover span.prd06 { background-position: -360px -178px; }
+.product a:hover p { font-weight: 500; color: #2d5b79; } */
+
+.product a:hover { font-weight: 500; color: #2d5b79; }
+.product a:before { content: ""; display: block; margin-bottom: 14px; width: 70px; height: 64px; background: url(../images/sp_com.png) no-repeat; }
+.product ul { margin: 40px 0; text-align: center; font-size: 0; }
+.product li { display: inline-block; padding: 0 50px; text-align: center; }
+.product li:nth-child(1) a:before { background-position: 0 -112px; }
+.product li:nth-child(2) a:before { background-position: -72px -112px; }
+.product li:nth-child(3) a:before { background-position: -144px -112px; }
+.product li:nth-child(4) a:before { background-position: -216px -112px; }
+.product li:nth-child(5) a:before { background-position: -288px -112px; }
+.product li:nth-child(6) a:before { background-position: -360px -112px; }
+.product li:nth-child(1):hover a:before { background-position: 0 -178px; }
+.product li:nth-child(2):hover a:before { background-position: -72px -178px; }
+.product li:nth-child(3):hover a:before { background-position: -144px -178px; }
+.product li:nth-child(4):hover a:before { background-position: -216px -178px; }
+.product li:nth-child(5):hover a:before { background-position: -288px -178px; }
+.product li:nth-child(6):hover a:before { background-position: -360px -178px; }
+
+/* magazine */
+.magazine { overflow: hidden; position: relative; height: 670px; background: #dfd9d1; }
+.magazine p { font-size: 14px; color: #3a3b36; text-align: center; line-height: 100%; }
+
+.magazine .slide_box > div { position: absolute; left: 50%; top: 150px; transform: translateX(-50%); width: 1180px; height: 430px; }
+/* 스크립트로 이동 */
+.magazine .slide_box > div:nth-child(1) { margin-left: -1280px; }
+.magazine .slide_box > div:nth-child(3) { margin-left: 1280px; }
+/* --- */
+.magazine .slide_box .left { overflow: hidden; position: relative; float: left; width: 800px; height: 430px; }
+.magazine .slide_box .left img { width: 100%; height: 100%; /* 다른 이미지라서 어쩔 수 없이 */ }
+.magazine .slide_box .left div { position: absolute; right: 0; top: 0; padding: 47px 20px 0; width: 200px; height: 100%; background: rgba(0, 0, 0, 0.5); box-sizing: border-box; }
+.magazine .slide_box .left div h3 { color: #fff; font-size: 20px; line-height: 32px; }
+.magazine .slide_box .left div h3 span { display:block; font-weight: normal; }
+.magazine .slide_box .left div p { padding: 9px 0 0; color: #fff; font-size: 16px; text-align: left; line-height: 24px;}
+.magazine .slide_box .left div a { position: absolute; right: 20px; bottom: 40px; display: block; width: 160px; height: 45px; border: 1px solid #fff; font-size: 16px; color: #fff; text-align: center; line-height: 45px; }
+
+.magazine .slide_box .right { float: right; padding: 20px 20px 0; width: 380px; height: 430px; background: #fff; box-sizing: border-box; }
+.magazine .slide_box .right li { padding: 0 0 20px; }
+.magazine .slide_box .right li a { display: table; width: 100%; }
+.magazine .slide_box .right li a div { display: table-cell; position: relative; padding: 0 0 0 100px; height: 82px; font-size: 16px; color: #333; vertical-align: middle; }
+.magazine .slide_box .right li a strong { display:block; font-size: 13px; color: #000;}
+.magazine .slide_box .right li a img { position: absolute; left: 0; top: 0; }
+.magazine .slide_box .right img { height: 100%; }
+.magazine.slide .control { bottom: 48px; }
+.magazine.slide .prev { left: 50%; margin: 25px 0 0 -640px; }
+.magazine.slide .next { right: 50%; margin: 25px -640px 0 0; }
+
+/* blog */
+.blog { position: relative; padding: 40px 0 90px; background-color: #f2f0ed; text-align: center; }
+.blog.slide .control { bottom: 48px; }
+.blog.slide .prev { background-position: -318px -542px; }
+.blog.slide .next { background-position: -351px -542px; }
+.blog.slide .control li.active a { background: #2d5b79; }
+.blog.slide .control div { padding: 0; }
+
+/* notice */
+.notice { position: relative; padding: 55px 0; box-sizing: border-box; height: 390px; background: url(../images/bg_main_business.jpg) no-repeat; }
+.notice .layout { width: 1180px; margin: 0 auto; }
+.notice div h2 { padding: 0; text-align: center; color: #2d5b79; font-size: 25px; font-weight: 500; height: 65px; line-height: 65px; }
+/* 이미지 변경해서 hover 효과 내는 방법 */
+.notice .location { float: left; display: block; margin-right: 20px; width: 280px; height: 280px; background: url(../images/bg_key_link03.jpg) no-repeat 0 0; background-size: cover; text-align: center; transition: all 0.5s; }
+.notice .location:hover { background: url(../images/bg_key_link03_hover.jpg) no-repeat 0 0; background-size: cover; }
+.notice .location .title { padding-top: 153px; font-size: 18px; color: #fff; font-weight: 500; }
+.notice .location .sub { display: none; margin-top: 12px; text-align: center; color: #fff; line-height: 1.5; }
+.notice .location:hover .sub { display: block; }
+/* 배경색상을 이용해서 hover 효과 내는 방법 */
+/* .notice div .location a .title { padding-top: 153px; font-size: 18px; color: #fff; font-weight: 500; }
+.notice div .location a .sub { display: none; margin-top: 12px; text-align: center; color: #fff; line-height: 1.5; }
+.notice div .location a:hover { background: rgba(45, 91, 121, 0.5); }
+.notice div .location a:hover .sub { display: block; }
+.notice div .location { float: left; display: block; margin-right: 20px; width: 280px; height: 280px; background: url(../images/bg_key_link03.jpg) no-repeat; text-align: center; } */
+
+.notice .board { float: left; width: 580px; height: 280px; }
+.notice .board a:hover { text-decoration: underline; }
+.notice .board .detail_btn { position: absolute; top: 17px; right: 23px; width: 30px; height: 30px; border-radius: 50%; color: transparent; background: url(../images/sp_com.png) no-repeat #fff -196px -60px; }
+.notice .board .notice_list,
+.notice .board .news { position: relative; display: block; float: left; width: 280px; height: 280px; background: #f2f0ed; }
+.notice .board .notice_list { margin-right: 20px; }
+.notice .board li { border-top: 1px solid #fff; }
+.notice .board li a { display: block; padding: 15px 30px; }
+.notice .board li a p { min-height: 24px; overflow: hidden; text-overflow: ellipsis; word-wrap: break-word; line-height: 1.2em; height: 2.4em; text-align: left; white-space: normal; }
+.notice .board li a span { margin-top: 23px; display: inline-block; color: #929292; font-size: 14px; }
+
+.notice .search { float: right; padding: 0 20px; width: 280px; height: 280px; box-sizing: border-box; background: #fff; color: #000; }
+.notice .search form .selectbox { position: relative; height: 45px; margin-top: 10px; display: block; border: 0 none; z-index: 1; background-color: #f2f0ed; }
+.notice .search form .selectbox label { position: absolute; padding: 0 35px 0 15px; height: 45px; line-height: 45px; z-index: -1; /* IE8에서 label이 위치한 곳이 클릭되지 않는 것 해결 */}
+.notice .search form .selectbox select { width: 100%; padding: 0 35px 0 15px; font-family: inherit; border: 0; opacity: 0; }
+.notice .search form .selectbox:before { content: ""; position: absolute; top: 50%; right: 15px; width: 0; height: 0; margin-top: -2px; border-left: 3px solid transparent; border-right: 3px solid transparent; border-top: 5px solid #000; }
+.notice .search form input { display: block; margin-top: 10px; width: 100%; padding: 0 20px; border: 0; height: 45px; line-height: 45px; background-color: #f2f0ed; font-size: 16px; }
+.notice .search form a { display: block; margin-top: 30px; width: 100%; height: 45px; line-height: 45px; text-align: center; background-color: #2d5b79; color: #fff; font-size: 16px; }
+
+/* footer */
+
+footer { background-color: #4c5459; color: #fff; font-size: 14px; }
+footer .top { background: #383f43; }
+footer .top > div { width: 1180px; margin: 0 auto; padding: 13px 0; }
+footer .top > div ul { float: left; }
+footer .top > div ul li { float: left; position: relative; padding: 0 19px 0 0; }
+footer .top > div ul li:after { content: ""; position: absolute; right: 9px; top: 50%; margin-top: -3px; width: 1px; height: 8px; background: #70767a; }
+footer .top > div ul li:last-child:after { display: none; }
+footer .top > div ul li a { color: #fff; font-size: 13px; line-height: 45px; }
+footer .top > div ul li a:hover { text-decoration: underline; }
+footer .top > div div { float: right; }
+footer .top > div div p { display: inline-block; width: 242px; height: 45px; background: #2a3033; color: #fff; text-align: center; line-height: 45px; font-size: 13px; }
+footer .top > div div p strong { padding-left: 15px; font-size: 20px; vertical-align: -3px; }
+
+footer .top > div div .selectbox { padding: 0 20px; margin: 0 0 0 7px; }
+footer .top > div div .selectbox label { padding: 0; }
+footer .top > div div .selectbox select { display: inline-block; width: 160px; height: 45px; line-height: 45px; background-color: #fff; text-decoration: none; }
+footer .bottom { position: relative; margin: 0 auto; padding: 40px 0; width: 1180px; text-align: left; }
+footer .bottom .footer_logo { display: inline-block; margin-bottom: 25px; width: 130px; height: 50px; background: url(../images/sp_com.png) no-repeat -150px 0; color: transparent; }
+footer .bottom li { display: inline-block; position: relative; padding: 0 10px; }
+footer .bottom li:first-child { padding-left: 0; }
+footer .bottom li:after { content: ""; position: absolute; right: -3px; top: 50%; margin-top: -5px; width: 1px; height: 8px; background: #70767a; }
+footer .bottom li:last-child:after { display: none; }
+footer .bottom p { padding-top: 10px; }
